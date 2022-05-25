@@ -4,9 +4,47 @@
 #include <iostream>
 using namespace std;
 
-struct Tutor {
+//這個是Double Linked List
+class Node {
+public:
+    int value;
+    Node* next;
+    Node* previos;
+
+};
+
+
+//這個是tutor的資料庫
+struct tutor
+{
     string name;
     int ID;
+    int datejoin;
+    int dateterminal;
+    int hourlypaid;
+    int phone;
+    string address;
+    int tuitioncode;
+    string tuitioncenter;
+    int subjectcode;
+    string subjectname;
+    int rating;
+};
+
+
+//這裏開始寫我們的action
+class Action {
+private:
+
+    void add_tutor() {
+        
+    }
+    
+    
+
+    
+
+
 };
 
 
