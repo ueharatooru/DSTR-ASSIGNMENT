@@ -36,36 +36,50 @@ public:
 
 
 //這裏開始寫我們的action
-void add_tutor() {
-    tutor Tutor1;
+void add_tutor(tutor T) {
     cout << "Enter your name: ";
-    cin >> Tutor1.name;
+    cin >> T.name;
     cout << "Enter your ID: ";
-    cin >> Tutor1.ID;
+    cin >> T.ID;
     cout << "Enter your date join(yyyy/mm/dd): ";
-    cin >> Tutor1.datejoin;
+    cin >> T.datejoin;
     cout << "Enter your date terminal(yyyy/mm/dd): ";
-    cin >> Tutor1.dateterminal;
+    cin >> T.dateterminal;
     cout << "Enter your hourly paid: ";
-    cin >> Tutor1.hourlypaid;
+    cin >> T.hourlypaid;
     cout << "Enter your phone: ";
-    cin >> Tutor1.phone;
+    cin >> T.phone;
     cout << "Enter your address: ";
-    cin >> Tutor1.address;
+    cin >> T.address;
     cout << "Enter your tuition code: ";
-    cin >> Tutor1.tuitioncode;
+    cin >> T.tuitioncode;
     cout << "Enter your tuition center name: ";
-    cin >> Tutor1.tuitioncenter;
+    cin >> T.tuitioncenter;
     cout << "Enter your subject code: ";
-    cin >> Tutor1.subjectcode;
+    cin >> T.subjectcode;
     cout << "Enter your subject name: ";
-    cin >> Tutor1.subjectname;
+    cin >> T.subjectname;
 
 };
-    
+
+void display_tutor() {
     
 
+}
     
+
+void action_page() {
+    int action;
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors";
+    cin >> action;
+    if (action == 1) {
+        tutor Tutor1;
+        add_tutor(Tutor1);
+    }
+    if (action == 2) {
+        display_tutor();
+    }
+}
 
 
 
@@ -76,7 +90,10 @@ void add_tutor() {
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Welcome Users" << endl;
+    cout << "----------------------------------------------------" << endl;
+    action_page();
+
     
 }
 
