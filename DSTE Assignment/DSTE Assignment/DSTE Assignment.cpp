@@ -62,9 +62,14 @@ void add_tutor(tutor T) {
 
 };
 
-void display_tutor() {
-    
-
+void display_tutor(tutor T) {
+ //大概想到这样 但觉得是不对的
+    int choose_ID;
+    cout << "Enter the Tutor_ID: " << T.ID << endl;
+    cin >> T.ID;
+    if (choose_ID == T.ID) {
+        
+    }
 }
     
 
