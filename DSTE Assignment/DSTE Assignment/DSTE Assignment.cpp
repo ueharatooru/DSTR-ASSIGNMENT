@@ -2,11 +2,21 @@
 //
 
 #include <iostream>
+using namespace std;
+
+struct Tutor {
+    string name;
+    int ID;
+};
+
+
+
+
 
 int main()
 {
     std::cout << "Hello World!\n";
-    std::cout << "Hi man!\n";
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
