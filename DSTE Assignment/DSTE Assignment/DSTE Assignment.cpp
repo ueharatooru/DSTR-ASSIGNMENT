@@ -4,23 +4,13 @@
 #include <iostream>
 using namespace std;
 
-//這個是Double Linked List
-class Node {
-public:
-    int value;
-    Node* next;
-    Node* previos;
-
-};
-
-
 //這個是tutor的資料庫
 struct tutor
 {
     string name;
     int ID;
-    int datejoin;
-    int dateterminal;
+    string datejoin;
+    string dateterminal;
     int hourlypaid;
     int phone;
     string address;
@@ -31,21 +21,54 @@ struct tutor
     int rating;
 };
 
-
-//這裏開始寫我們的action
-class Action {
-private:
-
-    void add_tutor() {
-        
-    }
-    
-    
-
-    
-
+//這個是Double Linked List
+class Node {
+public:
+    tutor Tutor;
+    Node* next;
+    Node* previous;
 
 };
+
+
+
+
+
+
+//這裏開始寫我們的action
+void add_tutor() {
+    tutor Tutor1;
+    cout << "Enter your name: ";
+    cin >> Tutor1.name;
+    cout << "Enter your ID: ";
+    cin >> Tutor1.ID;
+    cout << "Enter your date join(yyyy/mm/dd): ";
+    cin >> Tutor1.datejoin;
+    cout << "Enter your date terminal(yyyy/mm/dd): ";
+    cin >> Tutor1.dateterminal;
+    cout << "Enter your hourly paid: ";
+    cin >> Tutor1.hourlypaid;
+    cout << "Enter your phone: ";
+    cin >> Tutor1.phone;
+    cout << "Enter your address: ";
+    cin >> Tutor1.address;
+    cout << "Enter your tuition code: ";
+    cin >> Tutor1.tuitioncode;
+    cout << "Enter your tuition center name: ";
+    cin >> Tutor1.tuitioncenter;
+    cout << "Enter your subject code: ";
+    cin >> Tutor1.subjectcode;
+    cout << "Enter your subject name: ";
+    cin >> Tutor1.subjectname;
+
+};
+    
+    
+
+    
+
+
+
 
 
 
