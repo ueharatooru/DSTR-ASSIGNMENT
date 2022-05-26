@@ -78,7 +78,7 @@ void add_tutor() {
 
 };
 
-<<<<<<< HEAD
+
 void display_tutor() {
     fstream file;
     file.open("Tutor.txt", ios::in);
@@ -90,16 +90,6 @@ void display_tutor() {
         file.close();
     }
 
-=======
-void display_tutor(tutor T) {
- //大概想到这样 但觉得是不对的
-    int choose_ID;
-    cout << "Enter the Tutor_ID: " << T.ID << endl;
-    cin >> T.ID;
-    if (choose_ID == T.ID) {
-        
-    }
->>>>>>> ae1c270ddeb0cb9d5a279bc634c261bfd2826252
 }
     
 
