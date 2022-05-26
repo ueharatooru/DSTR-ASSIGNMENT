@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
 //這個是tutor的資料庫
@@ -36,7 +38,8 @@ public:
 
 
 //這裏開始寫我們的action
-void add_tutor(tutor T) {
+void add_tutor() {
+    tutor T;
     cout << "Enter your name: ";
     cin >> T.name;
     cout << "Enter your ID: ";
@@ -59,22 +62,43 @@ void add_tutor(tutor T) {
     cin >> T.subjectcode;
     cout << "Enter your subject name: ";
     cin >> T.subjectname;
+    cout << "Enter your Rating: ";
+    cin >> T.rating;
+
+    fstream file;
+    file.open("Tutor.txt", ios::app);
+    if (file.is_open()) {
+        file << T.ID << "," << T.name << "," << T.datejoin << "," << T.phone << "," << T.address << "," << T.tuitioncode << "," << T.tuitioncenter << "," << T.subjectcode << "," << T.subjectname << "," << T.rating << endl;
+        file.close();
+        cout << "Done" << endl;
+
+       
+    }
+    
 
 };
 
 void display_tutor() {
-    
+    fstream file;
+    file.open("Tutor.txt", ios::in);
+    string line;
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            cout << line << endl;
+        }
+        file.close();
+    }
 
 }
     
 
 void action_page() {
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors";
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
     cin >> action;
     if (action == 1) {
         tutor Tutor1;
-        add_tutor(Tutor1);
+        add_tutor();
     }
     if (action == 2) {
         display_tutor();
