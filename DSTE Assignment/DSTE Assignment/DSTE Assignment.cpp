@@ -24,17 +24,13 @@ struct tutor
 };
 
 //這個是Double Linked List
-class Node {
+struct Node {
 public:
     tutor Tutor;
     Node* next;
     Node* previous;
 
 };
-
-
-
-
 
 
 //這裏開始寫我們的action
@@ -68,7 +64,9 @@ void add_tutor() {
     fstream file;
     file.open("Tutor.txt", ios::app);
     if (file.is_open()) {
-        file << T.ID << "," << T.name << "," << T.datejoin << "," << T.phone << "," << T.address << "," << T.tuitioncode << "," << T.tuitioncenter << "," << T.subjectcode << "," << T.subjectname << "," << T.rating << endl;
+        file << T.ID << "," << T.name << "," << T.datejoin << "," << T.dateterminal << "," << T.phone << "," <<
+            T.address << "," << T.hourlypaid << "," << T.tuitioncode << "," << T.tuitioncenter << "," <<
+            T.subjectcode << "," << T.subjectname << "," << T.rating << endl;
         file.close();
         cout << "Done" << endl;
 
@@ -77,7 +75,6 @@ void add_tutor() {
     
 
 };
-
 
 void display_tutor() {
     fstream file;
@@ -91,11 +88,39 @@ void display_tutor() {
     }
 
 }
-    
+
+void search_tutor() {
+    int ID, search_id;
+    fstream file;
+    file.open("Tutor.txt", ios::in);
+    string line;
+    if (file.is_open()) {
+        for (search_id = 0; search_id <= 11; search_id++) {
+            cout << "Enter the Tutor ID: " << endl;
+            cin >> ID;
+            if (search_id == ID) {
+                cout << file[0] << endl;
+                cout << file[1] << endl;
+                cout << file[2] << endl;
+                cout << file[3] << endl;
+                cout << file[4] << endl;
+                cout << file[5] << endl;
+                cout << file[6] << endl;
+                cout << file[7] << endl;
+                cout << file[8] << endl;
+                cout << file[9] << endl;
+                cout << file[10] << endl;
+                cout << file[11] << endl;
+            }
+        }
+        
+    }
+    file.close();
+}
 
 void action_page() {
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Search tutor: ";
     cin >> action;
     if (action == 1) {
         tutor Tutor1;
@@ -103,6 +128,9 @@ void action_page() {
     }
     if (action == 2) {
         display_tutor();
+    }
+    if (action == 3) {
+        search_tutor();
     }
 }
 
