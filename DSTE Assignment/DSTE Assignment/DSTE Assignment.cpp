@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
+#include <iterator>
 using namespace std;
 
 //這個是tutor的資料庫
@@ -89,38 +91,28 @@ void display_tutor() {
 
 }
 
-void search_tutor() {
-    int ID, search_id;
+void sort_and_display_tutorID() {
+    string Arr[100];
+    short loop = 0;
     fstream file;
     file.open("Tutor.txt", ios::in);
     string line;
     if (file.is_open()) {
-        for (search_id = 0; search_id <= 11; search_id++) {
-            cout << "Enter the Tutor ID: " << endl;
-            cin >> ID;
-            if (search_id == ID) {
-                cout << file[0] << endl;
-                cout << file[1] << endl;
-                cout << file[2] << endl;
-                cout << file[3] << endl;
-                cout << file[4] << endl;
-                cout << file[5] << endl;
-                cout << file[6] << endl;
-                cout << file[7] << endl;
-                cout << file[8] << endl;
-                cout << file[9] << endl;
-                cout << file[10] << endl;
-                cout << file[11] << endl;
-            }
+        while (!file.eof()) {
+            getline(file, line);
+            Arr[loop] = line;
+            cout << Arr[loop] << endl;
+            loop++;
         }
-        
+        file.close();
     }
-    file.close();
+    else cout << "can't open the file";
+    system("PAUSE");
 }
 
 void action_page() {
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Search tutor: ";
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Sort and display Tutor: ";
     cin >> action;
     if (action == 1) {
         tutor Tutor1;
@@ -130,8 +122,9 @@ void action_page() {
         display_tutor();
     }
     if (action == 3) {
-        search_tutor();
+        sort_and_display_tutorID();
     }
+
 }
 
 

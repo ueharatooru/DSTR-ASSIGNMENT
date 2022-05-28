@@ -1,2 +1,4 @@
-1,lee,12sq,1,daw,1,daw,1,da,12
-123,chunwei,2001/11/11,145678435,Selangor,3,Gank,2,math,5
+100,chunwei,2009/2/4,2008/3/4,0134527898,Selangor,40,3,Bonk,2,math,4
+109,CheeHow,2003/4/2,2010/4/2,0197895098,Rawang,50,4,Sink,5,English,5
+101,zewei,2009/3/4,2008/4/6,0187763567,Sarawak,70,1,Jungle,1,Chinese,3
+107,xing,2001/3/6,2009/4/7,0192245674,Penang,30,2,Horn,4,Science,2
