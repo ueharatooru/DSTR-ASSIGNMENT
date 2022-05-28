@@ -137,21 +137,7 @@ void search_ID(string ID) {
 
 
 
-int main()
-{
-    cout << "Welcome Users" << endl;
-    cout << "----------------------------------------------------" << endl;
-    int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
-    cin >> action;
-    if (action == 1) {
 
-        add_tutor();
-    }
-    if (action == 2) {
-        display_tutor();
-    }
-}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 

@@ -15,18 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="action.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="addtutor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="displaytutor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="action.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tutorheader.h">
+    <ClInclude Include="Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

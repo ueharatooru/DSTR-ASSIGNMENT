@@ -1,4 +1,5 @@
 #pragma once
+using namespace std;
 
 // Action manu
 void action_page();
@@ -8,3 +9,16 @@ void add_tutor();
 void display_tutor();
 // seach by ID
 void search_ID(int ID);
+
+ 
+
+//”‡ŒÂ¥Linked List
+class Node {
+public:
+    int value;
+    Node* next;
+
+
+};
+
+// tutor count
