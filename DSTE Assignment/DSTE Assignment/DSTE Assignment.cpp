@@ -8,19 +8,31 @@
 #include <array>
 using namespace std;
 
-int count = 0;
-string Tutor[11][11];
+int T = 0;
 
-//這個是Double Linked List
+
+//Tutor ID, Name, Date Joined, Date Terminated, Hourly Pay Rate, Phone, Address, 
+// Tuition Center Code, Tuition Center Name, Subject Code, Subject Name and Rating.
+//struct Tutorlist
+//{
+//    string ID, Name, Datejoin, Dateterminal, address, centercode, cantername, subjectcode, subjectname;
+//    int hourpay, phone, rating;
+//
+//
+//
+//
+//};
+
+//這個是Linked List
 class Node {
 public:
-    array tutor;
+    int value;
     Node* next;
-    Node* previous;
+
 
 };
 
-
+string Tutor[100][10];
 
 
 
@@ -28,55 +40,70 @@ public:
 //這裏開始寫我們的action
 void add_tutor() {
 
-    cout << "Enter your ID: ";
-    cin >> Tutor[count][0];
-    cout << "Enter your Name: ";
-    cin >> Tutor[0][1];
-    cout << "Enter your date join(yyyy/mm/dd): ";
-    cin >> Tutor[0][2];
-    cout << "Enter your date terminal(yyyy/mm/dd): ";
-    cin >> Tutor[0][3];
-    cout << "Enter your hourly paid: ";
-    cin >> Tutor[0][4];
-    cout << "Enter your phone: ";
-    cin >> Tutor[0][5];
-    cout << "Enter your address: ";
-    cin >> Tutor[0][6];
-    cout << "Enter your tuition code: ";
-    cin >> Tutor[0][7];
-    cout << "Enter your tuition center name: ";
-    cin >> Tutor[0][8];
-    cout << "Enter your subject code: ";
-    cin >> Tutor[0][9];
-    cout << "Enter your subject name: ";
-    cin >> Tutor[0][10];
-    cout << "Enter your Rating: ";
-    cin >> Tutor[0][11];
+    while (true) {
+        cout << "Enter your ID: ";
+        cin >> Tutor[T][0];
+        cout << "Enter your Name: ";
+        cin >> Tutor[T][1];
+        cout << "Enter your date join(yyyy/mm/dd): ";
+        cin >> Tutor[T][2];
+        cout << "Enter your date terminal(yyyy/mm/dd): ";
+        cin >> Tutor[T][3];
+        cout << "Enter your hourly paid: ";
+        cin >> Tutor[T][4];
+        cout << "Enter your phone: ";
+        cin >> Tutor[T][5];
+        cout << "Enter your address: ";
+        cin >> Tutor[T][6];
+        cout << "Enter your tuition code: ";
+        cin >> Tutor[T][7];
+        cout << "Enter your tuition center name: ";
+        cin >> Tutor[T][8];
+        cout << "Enter your subject code: ";
+        cin >> Tutor[T][9];
+        cout << "Enter your subject name: ";
+        cin >> Tutor[T][10];
 
 
+        T++;
 
+        char ac;
+        cout << "Continue add?( Y or N ): ";
+        cin >> ac;
+        if (ac == 'Y') {
+            continue;
+        }
+        else if (ac == 'N') { break; }
+        else { cout << "Only Y or N" << endl; continue; }
+    }
+    
 
+    cout << "Done" << endl;
 
+    int action;
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cin >> action;
+    if (action == 1) {
 
+        add_tutor();
+    }
+    if (action == 2) {
+        display_tutor();
+    }
 
 };
 
 
 void display_tutor() {
-    fstream file;
-    file.open("Tutor.txt", ios::in);
-    string line;
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            cout << "\n" << line << endl;
+    for (int i = 0; i < T; i++) {
+        for (int j = 0; j < 10; i++) {
+            if (j == 10) {
+                cout << Tutor[i][j] << endl;
+            }
+            cout << Tutor[i][j];
         }
-        file.close();
     }
 
-}
-
-
-void action_page() {
     int action;
     cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
     cin >> action;
@@ -89,21 +116,18 @@ void action_page() {
     }
 }
 
-void search_ID(int ID) {
-    fstream file;
-    string str;
-    file.open("Tutor.txt", ios::in);
-    if (file.is_open()) {
-        while (getline(file, str)) {
-            for (string i : str) {
-
-            }
-
-        }
 
 
 
+
+
+void search_ID(string ID) {
+    for (int i = 1; i < T; i++) {
+        
     }
+
+
+
 }
 
 
@@ -117,7 +141,16 @@ int main()
 {
     cout << "Welcome Users" << endl;
     cout << "----------------------------------------------------" << endl;
-    action_page();
+    int action;
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cin >> action;
+    if (action == 1) {
+
+        add_tutor();
+    }
+    if (action == 2) {
+        display_tutor();
+    }
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
