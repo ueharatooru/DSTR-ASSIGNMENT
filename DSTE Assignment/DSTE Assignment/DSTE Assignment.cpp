@@ -1,96 +1,106 @@
-﻿// DSTE Assignment.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// DSTutorE Assignment.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 #include <fstream>
 #include <string>
+<<<<<<< HEAD
 #include <vector>
 #include <iterator>
+=======
+#include <cstring>
+#include <array>
+>>>>>>> 56440890493fe3b60a5e6ca14f0f5c016a69ff96
 using namespace std;
 
-//這個是tutor的資料庫
-struct tutor
-{
-    string name;
-    int ID;
-    string datejoin;
-    string dateterminal;
-    int hourlypaid;
-    int phone;
-    string address;
-    int tuitioncode;
-    string tuitioncenter;
-    int subjectcode;
-    string subjectname;
-    int rating;
-};
+int T = 0;
 
 //這個是Double Linked List
 struct Node {
+
+//Tutor ID, Name, Date Joined, Date Terminated, Hourly Pay Rate, Phone, Address, 
+// Tuition Center Code, Tuition Center Name, Subject Code, Subject Name and Rating.
+//struct Tutorlist
+//{
+//    string ID, Name, Datejoin, Dateterminal, address, centercode, cantername, subjectcode, subjectname;
+//    int hourpay, phone, rating;
+//
+//
+//
+//
+//};
+
+//這個是Linked List
+class Node {
 public:
-    tutor Tutor;
+    int value;
     Node* next;
-    Node* previous;
+
 
 };
+
+string Tutor[100][10];
+
+
 
 
 //這裏開始寫我們的action
 void add_tutor() {
-    tutor T;
-    cout << "Enter your name: ";
-    cin >> T.name;
-    cout << "Enter your ID: ";
-    cin >> T.ID;
-    cout << "Enter your date join(yyyy/mm/dd): ";
-    cin >> T.datejoin;
-    cout << "Enter your date terminal(yyyy/mm/dd): ";
-    cin >> T.dateterminal;
-    cout << "Enter your hourly paid: ";
-    cin >> T.hourlypaid;
-    cout << "Enter your phone: ";
-    cin >> T.phone;
-    cout << "Enter your address: ";
-    cin >> T.address;
-    cout << "Enter your tuition code: ";
-    cin >> T.tuitioncode;
-    cout << "Enter your tuition center name: ";
-    cin >> T.tuitioncenter;
-    cout << "Enter your subject code: ";
-    cin >> T.subjectcode;
-    cout << "Enter your subject name: ";
-    cin >> T.subjectname;
-    cout << "Enter your Rating: ";
-    cin >> T.rating;
 
-    fstream file;
-    file.open("Tutor.txt", ios::app);
-    if (file.is_open()) {
-        file << T.ID << "," << T.name << "," << T.datejoin << "," << T.dateterminal << "," << T.phone << "," <<
-            T.address << "," << T.hourlypaid << "," << T.tuitioncode << "," << T.tuitioncenter << "," <<
-            T.subjectcode << "," << T.subjectname << "," << T.rating << endl;
-        file.close();
-        cout << "Done" << endl;
+    while (true) {
+        cout << "Enter your ID: ";
+        cin >> Tutor[T][0];
+        cout << "Enter your Name: ";
+        cin >> Tutor[T][1];
+        cout << "Enter your date join(yyyy/mm/dd): ";
+        cin >> Tutor[T][2];
+        cout << "Enter your date terminal(yyyy/mm/dd): ";
+        cin >> Tutor[T][3];
+        cout << "Enter your hourly paid: ";
+        cin >> Tutor[T][4];
+        cout << "Enter your phone: ";
+        cin >> Tutor[T][5];
+        cout << "Enter your address: ";
+        cin >> Tutor[T][6];
+        cout << "Enter your tuition code: ";
+        cin >> Tutor[T][7];
+        cout << "Enter your tuition center name: ";
+        cin >> Tutor[T][8];
+        cout << "Enter your subject code: ";
+        cin >> Tutor[T][9];
+        cout << "Enter your subject name: ";
+        cin >> Tutor[T][10];
 
-       
+
+        T++;
+
+        char ac;
+        cout << "Continue add?( Y or N ): ";
+        cin >> ac;
+        if (ac == 'Y') {
+            continue;
+        }
+        else if (ac == 'N') { break; }
+        else { cout << "Only Y or N" << endl; continue; }
     }
     
 
-};
+    cout << "Done" << endl;
 
-void display_tutor() {
-    fstream file;
-    file.open("Tutor.txt", ios::in);
-    string line;
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            cout << line << endl;
-        }
-        file.close();
+    int action;
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cin >> action;
+    if (action == 1) {
+
+        add_tutor();
+    }
+    if (action == 2) {
+        display_tutor();
     }
 
-}
+};
 
+<<<<<<< HEAD
 void sort_and_display_tutorID() {
     string Arr[100];
     short loop = 0;
@@ -109,13 +119,23 @@ void sort_and_display_tutorID() {
     else cout << "can't open the file";
     system("PAUSE");
 }
+=======
+void display_tutor() {
+    for (int i = 0; i < T; i++) {
+        for (int j = 0; j < 10; i++) {
+            if (j == 10) {
+                cout << Tutor[i][j] << endl;
+            }
+            cout << Tutor[i][j];
+        }
+    }
+>>>>>>> 56440890493fe3b60a5e6ca14f0f5c016a69ff96
 
-void action_page() {
     int action;
     cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Sort and display Tutor: ";
     cin >> action;
     if (action == 1) {
-        tutor Tutor1;
+
         add_tutor();
     }
     if (action == 2) {
@@ -132,16 +152,22 @@ void action_page() {
 
 
 
+void search_ID(string ID) {
+    for (int i = 1; i < T; i++) {
+        
+    }
 
 
-int main()
-{
-    cout << "Welcome Users" << endl;
-    cout << "----------------------------------------------------" << endl;
-    action_page();
 
-    
 }
+
+
+
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
