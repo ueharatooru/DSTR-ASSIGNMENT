@@ -10,6 +10,8 @@ using namespace std;
 
 int T = 0;
 
+//這個是Double Linked List
+struct Node {
 
 //Tutor ID, Name, Date Joined, Date Terminated, Hourly Pay Rate, Phone, Address, 
 // Tuition Center Code, Tuition Center Name, Subject Code, Subject Name and Rating.
@@ -93,7 +95,6 @@ void add_tutor() {
 
 };
 
-
 void display_tutor() {
     for (int i = 0; i < T; i++) {
         for (int j = 0; j < 10; i++) {
@@ -105,7 +106,7 @@ void display_tutor() {
     }
 
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Search tutor: ";
     cin >> action;
     if (action == 1) {
 
@@ -113,6 +114,9 @@ void display_tutor() {
     }
     if (action == 2) {
         display_tutor();
+    }
+    if (action == 3) {
+        search_tutor();
     }
 }
 

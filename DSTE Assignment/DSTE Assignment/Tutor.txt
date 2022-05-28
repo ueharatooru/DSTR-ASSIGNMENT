@@ -1,3 +1,7 @@
 1,lee,12sq,1,daw,1,daw,1,da,12
+<<<<<<< HEAD
 2,ChunWei,2010/1/1,101011,dawdwad,2,TuitionJIn,1,Science,4
 12,Lee,12,12,12,23,23,34,34,1.8
+=======
+123,chunwei,2001/11/11,145678435,Selangor,3,Gank,2,math,5
+>>>>>>> 8ea9528599629ffbe003a49e0fa5898769b88fee
