@@ -1,10 +1,11 @@
-﻿#include "Header.h"
+﻿// pvs-studio-analyzer credentials PVS-Studio Free FREE-FREE-FREE-FREE
+#include "Header.h"
 
 using namespace std;
 
 void action_page() {
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
+    cout << "\nChoose your action: 1) add tutor, 2) Display all tutors: ";
     cin >> action;
     if (action == 1) {
 
@@ -21,4 +22,5 @@ int main()
     cout << "Welcome Users" << endl;
     cout << "----------------------------------------------------" << endl;
     action_page();
+
 }

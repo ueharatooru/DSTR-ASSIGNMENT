@@ -1,0 +1,30 @@
+PVS-Studio version: 7.18.59865.3530
+Base address: 00007FF7D3950000
+#0   Object "", at 00007FF7D39B5D16, in  ?? 
+#1   Object "", at 00007FF7D40F2BB0, in  ?? 
+#2   Object "", at 00007FF7D40E2162, in  ?? 
+#3   Object "", at 00007FF7D40C7B64, in  ?? 
+#4   Object "", at 00007FF7D40E2CF1, in  ?? 
+#5   Object "", at 00007FF7D40C82C9, in  ?? 
+#6   Object "", at 00007FFD54828ECF, in _chkstk
+#7   Object "", at 00007FFD547B8E63, in RtlUnwindEx
+#8   Object "", at 00007FF7D40C7D2E, in  ?? 
+#9   Object "", at 00007FF7D40E4341, in  ?? 
+#10  Object "", at 00007FF7D40E3BE2, in  ?? 
+#11  Object "", at 00007FF7D40E2DED, in  ?? 
+#12  Object "", at 00007FF7D40C82C9, in  ?? 
+#13  Object "", at 00007FFD54828E4F, in _chkstk
+#14  Object "", at 00007FFD547B5E9A, in RtlRestoreContext
+#15  Object "", at 00007FFD547B3163, in RtlRaiseException
+#16  Object "", at 00007FFD5201474C, in RaiseException
+#17  Object "", at 00007FF7D40C7430, in  ?? 
+#18  Object "", at 00007FF7D39637A6, in  ?? 
+#19  Object "", at 00007FF7D39674C3, in  ?? 
+#20  Object "", at 00007FF7D39B2409, in  ?? 
+#21  Object "", at 00007FF7D39B5C5F, in  ?? 
+#22  Object "", at 00007FF7D397F6B3, in  ?? 
+#23  Object "", at 00007FF7D397D213, in  ?? 
+#24  Object "", at 00007FF7D396EFE5, in  ?? 
+#25  Object "", at 00007FF7D39512BC, in  ?? 
+#26  Object "", at 00007FF7D40C71A4, in  ?? 
+#27  Object "", at 00007FFD52C354E0, in BaseThreadInitThunk

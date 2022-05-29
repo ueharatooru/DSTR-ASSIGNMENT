@@ -130,6 +130,7 @@
     <ClCompile Include="action.cpp" />
     <ClCompile Include="addtutor.cpp" />
     <ClCompile Include="displaytutor.cpp" />
+    <ClCompile Include="search.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
