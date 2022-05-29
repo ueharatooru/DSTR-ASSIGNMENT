@@ -3,12 +3,10 @@
 using namespace std;
 
 int T = 0;
-
-string Tutor[100][10];
+string Tutor[100][11];
 
 void add_tutor() {
-
-    
+        
         cout << "Enter your ID: ";
         cin >> Tutor[T][0];
         cout << "Enter your Name: ";
@@ -32,7 +30,7 @@ void add_tutor() {
         cout << "Enter your subject name: ";
         cin >> Tutor[T][10];
 
-        
+        cout << Tutor[T];
         T++;
 
         while (true) {
@@ -49,22 +47,11 @@ void add_tutor() {
 
 void display_tutor() {
     for (int i = 0; i < T; i++) {
-        for (int j = 0; j < 10; i++) {
+        for (int j = 0; j < 10; j++) {
             if (j == 10) {
                 cout << Tutor[i][j] << endl;
             }
             cout << Tutor[i][j];
         }
-    }
-
-    int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors: ";
-    cin >> action;
-    if (action == 1) {
-
-        add_tutor();
-    }
-    if (action == 2) {
-        display_tutor();
     }
 }

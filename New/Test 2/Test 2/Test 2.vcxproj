@@ -129,7 +129,8 @@
   <ItemGroup>
     <ClCompile Include="action.cpp" />
     <ClCompile Include="addtutor.cpp" />
-    <ClCompile Include="displaytutor.cpp" />
+    <ClCompile Include="Delete.cpp" />
+    <ClCompile Include="modify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
