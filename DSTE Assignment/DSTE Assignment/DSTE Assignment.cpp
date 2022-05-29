@@ -4,8 +4,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+<<<<<<< HEAD
+#include <vector>
+#include <iterator>
+=======
 #include <cstring>
 #include <array>
+>>>>>>> 56440890493fe3b60a5e6ca14f0f5c016a69ff96
 using namespace std;
 
 int T = 0;
@@ -95,6 +100,26 @@ void add_tutor() {
 
 };
 
+<<<<<<< HEAD
+void sort_and_display_tutorID() {
+    string Arr[100];
+    short loop = 0;
+    fstream file;
+    file.open("Tutor.txt", ios::in);
+    string line;
+    if (file.is_open()) {
+        while (!file.eof()) {
+            getline(file, line);
+            Arr[loop] = line;
+            cout << Arr[loop] << endl;
+            loop++;
+        }
+        file.close();
+    }
+    else cout << "can't open the file";
+    system("PAUSE");
+}
+=======
 void display_tutor() {
     for (int i = 0; i < T; i++) {
         for (int j = 0; j < 10; i++) {
@@ -104,9 +129,10 @@ void display_tutor() {
             cout << Tutor[i][j];
         }
     }
+>>>>>>> 56440890493fe3b60a5e6ca14f0f5c016a69ff96
 
     int action;
-    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Search tutor: ";
+    cout << "Choose your action: 1) add tutor, 2) Display all tutors, 3)Sort and display Tutor: ";
     cin >> action;
     if (action == 1) {
 
@@ -116,8 +142,9 @@ void display_tutor() {
         display_tutor();
     }
     if (action == 3) {
-        search_tutor();
+        sort_and_display_tutorID();
     }
+
 }
 
 

@@ -129,8 +129,13 @@
   <ItemGroup>
     <ClCompile Include="action.cpp" />
     <ClCompile Include="addtutor.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="displaytutor.cpp" />
     <ClCompile Include="search.cpp" />
+=======
+    <ClCompile Include="Delete.cpp" />
+    <ClCompile Include="modify.cpp" />
+>>>>>>> 1c6c8db036d68b9b3644812da401b50f1971c430
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />

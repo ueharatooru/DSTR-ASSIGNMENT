@@ -21,7 +21,10 @@
     <ClCompile Include="addtutor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="displaytutor.cpp">
+    <ClCompile Include="modify.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Delete.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="search.cpp">
